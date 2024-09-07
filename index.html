@@ -14,15 +14,31 @@
     </header>
     <main>
         <section>
-            <input type="text" placeholder="Digite o nome do mineral: ">
+            <input type="text" placeholder="Digite o nome do mineral ou seu grupo: " id="campo-pesquisa">
             <button onclick="pesquisar()">Pesquisar</button>
         </section>
         <section class="resultados-pesquisa" id="resultados-pesquisa">
         </section>
     </main>
+
+    <script>
+        // Obtém o elemento do campo de pesquisa e do botão
+        const cPesquisa = document.getElementById('campo-pesquisa');
+        const bPesquisar = document.getElementById('pesquisar()');
+
+        // Adiciona um ouvinte de eventos ao campo de pesquisa
+        cPesquisa.addEventListener('keypress', function(event) {
+            // Verifica se a tecla pressionada é a Enter (código 13)
+            if (event.key === 'Enter') {
+                // Simula um clique no botão
+                pesquisar();
+            }
+        });
+      </script>
+      
     <footer>
-        <p> 2024 - Minerais do Brasil - Todos os direitos reservados</p>
-        <p>Contato: webminst@hotmail.com</p>
+        <h4> 2024 - Minerais do Brasil - Todos os direitos reservados<br>
+        Contato: webminst@hotmail.com</h4>
     </footer>
     <script src="dados.js"></script>
     <script src="app.js"></script>
